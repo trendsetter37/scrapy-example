@@ -12,6 +12,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 env/
+scrapyenv/
 build/
 develop-eggs/
 dist/
@@ -59,4 +60,3 @@ docs/_build/
 
 # PyBuilder
 target/
-
