@@ -35,7 +35,7 @@ USER_AGENT = 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, lik
 #CONCURRENT_REQUESTS_PER_IP=16
 
 # Disable cookies (enabled by default)
-COOKIES_ENABLED=False
+COOKIES_ENABLED=True
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED=False
@@ -44,7 +44,11 @@ COOKIES_ENABLED=False
 DEFAULT_REQUEST_HEADERS = {
    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
    'Accept-Language': 'en',
-   'Referer': 'www.google.com'
+   'Accept-Encoding': 'gzip, deflate, sdch',
+   'Cache-Control': 'no-cache',
+   'Connection' : 'keep-alive',
+   'Pragma':'no-cache',
+   'Referer': 'http://www.lyst.com'
 }
 
 # Enable or disable spider middlewares

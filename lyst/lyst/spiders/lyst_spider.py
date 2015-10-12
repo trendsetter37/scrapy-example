@@ -13,7 +13,7 @@ class LystSpider(Spider):
     cookies = {
         '__ssid':'eacf9496-15a3-40b4-b67c-d482f7d947ed',
         '_ga' : 'GA1.2.1819590536.1444660498',
-        'analytics1': '4d4c96fa-8981-4b44-b45b-4a3ba14fcbbd:1:1:1444669394:16443ce3-1fb5-4fac-bcb9-7524f7dd0db1',
+        'analytics1': '"4d4c96fa-8981-4b44-b45b-4a3ba14fcbbd:1:1:1444669394:16443ce3-1fb5-4fac-bcb9-7524f7dd0db1"',
         'country': 'US',
         'sessionid':'ylvmjqpb5kwbpuqa4uwqhk5bihu7wgf5',
         'withfonts': '1'
