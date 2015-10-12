@@ -16,7 +16,16 @@ class LystSpider(Spider):
         for product in products:
             ''' pull designer, description, price, imgae_url, and image '''
             item = LystItem()
+
             item['designer'] = product.xpath(
                 '/div[@class="product-details"]/a[@class="product-short-description"]/div[@class="product-designer"]/@data-designer'
-            )
+            ).extract()[0]
+
+            item['description'] = product.xpath(
+                '/div[@class="product-details"]/a[@class="product-short-description"]/span/text()'
+            ).extract()[0]
+
+            item['price'] = product.xpath(
+                '/div[@class="product-details"]/div[@class="product-price"]/span/text()'
+            ).extract()[0] 
             pass #TODO
