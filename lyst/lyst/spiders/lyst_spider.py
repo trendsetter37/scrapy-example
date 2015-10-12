@@ -35,5 +35,4 @@ class LystSpider(Spider):
                 '/div[@class="product-card-image-wrapper"]/a[@class="product-card-image-link"]/img/@src'
             ).extract()[0]
 
-
-            
+            yield item
