@@ -20,8 +20,8 @@ class LystSpider(Spider):
     }
 
     def start_requests(self):
-        for url in start_urls:
-            request = Request(url, cookies=cookies, callback=self.parse)
+        for url in self.start_urls:
+            request = Request(url, cookies=self.cookies, callback=self.parse)
             yield request
 
     def parse(self, response):
