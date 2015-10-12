@@ -14,4 +14,4 @@ class LystItem(Item):
     description = Field()
     price = Field()
     image_url = Field()
-    image = Field()
+    

@@ -1,6 +1,8 @@
 from scrapy import Spider
 from scrapy.selector import Selector
 from lyst.items import LystItem
+import urlparse
+
 '''
 product details xpath = '//div[@class="product-card"]/div[@class="product-details"]'
 '''
@@ -27,5 +29,11 @@ class LystSpider(Spider):
 
             item['price'] = product.xpath(
                 '/div[@class="product-details"]/div[@class="product-price"]/span/text()'
-            ).extract()[0] 
-            pass #TODO
+            ).extract()[0]
+
+            item['image_url'] = product.xpath(
+                '/div[@class="product-card-image-wrapper"]/a[@class="product-card-image-link"]/img/@src'
+            ).extract()[0]
+
+
+            
