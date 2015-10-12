@@ -22,7 +22,7 @@ class LystSpider(Spider):
     def start_requests(self):
         for url in self.start_urls:
             request = Request(url, cookies=self.cookies, callback=self.parse)
-            print request # debugging
+            self.logger.info('Request: {}'.format(request))
             yield request
 
     def parse(self, response):
