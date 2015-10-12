@@ -13,9 +13,6 @@ BOT_NAME = 'lyst'
 
 SPIDER_MODULES = ['lyst.spiders']
 NEWSPIDER_MODULE = 'lyst.spiders'
-ITEM_PIPELINES = {
-    'lyst.pipelines.LystPipeline':300,
-}
 
 MONGODB_SERVER = "localhost"
 MONGODB_PORT = 27017
@@ -24,7 +21,7 @@ MONGODB_COLLECTION = "new-today"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'potential lyst contractor (javissullivan@gmail.com)'
+USER_AGENT = 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS=32
@@ -38,7 +35,7 @@ USER_AGENT = 'potential lyst contractor (javissullivan@gmail.com)'
 #CONCURRENT_REQUESTS_PER_IP=16
 
 # Disable cookies (enabled by default)
-#COOKIES_ENABLED=False
+COOKIES_ENABLED=False
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED=False
@@ -69,9 +66,9 @@ USER_AGENT = 'potential lyst contractor (javissullivan@gmail.com)'
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'lyst.pipelines.SomePipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'lyst.pipelines.LystPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -87,7 +84,7 @@ USER_AGENT = 'potential lyst contractor (javissullivan@gmail.com)'
 # Enable and configure HTTP caching (disabled by default)
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
 #HTTPCACHE_ENABLED=True
-#HTTPCACHE_EXPIRATION_SECS=0
+#HTTPCACHE_EXPIRATION_SECS=1000
 #HTTPCACHE_DIR='httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES=[]
 #HTTPCACHE_STORAGE='scrapy.extensions.httpcache.FilesystemCacheStorage'
