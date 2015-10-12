@@ -11,6 +11,7 @@ from scrapy.item import Item, Field
 
 class LystItem(Item):
     designer = Field()
-    desc = Field()
+    description = Field()
     price = Field()
-    url = Field()
+    image_url = Field()
+    image = Field()

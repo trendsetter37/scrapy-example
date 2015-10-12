@@ -1,5 +1,6 @@
 from scrapy import Spider
 from scrapy.selector import Selector
+from lyst.items import LystItem
 '''
 product details xpath = '//div[@class="product-card"]/div[@class="product-details"]'
 '''
@@ -13,4 +14,9 @@ class LystSpider(Spider):
         products = Selector(response).xpath('//div[@class="product-card"]')
 
         for product in products:
+            ''' pull designer, description, price, imgae_url, and image '''
+            item = LystItem()
+            item['designer'] = product.xpath(
+                '/div[@class="product-details"]/a[@class="product-short-description"]/div[@class="product-designer"]/@data-designer'
+            )
             pass #TODO
