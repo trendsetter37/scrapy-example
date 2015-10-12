@@ -13,7 +13,9 @@ BOT_NAME = 'lyst'
 
 SPIDER_MODULES = ['lyst.spiders']
 NEWSPIDER_MODULE = 'lyst.spiders'
-ITEM_PIPELINES = ['lyst.pipelines.MongoDBPipeline',]
+ITEM_PIPELINES = {
+    'lyst.pipelines.LystPipeline':300,
+}
 
 MONGODB_SERVER = "localhost"
 MONGODB_PORT = 27017
@@ -22,7 +24,7 @@ MONGODB_COLLECTION = "new-today"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'potential lyst employee (javissullivan@gmail.com)'
+USER_AGENT = 'potential lyst contractor (javissullivan@gmail.com)'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS=32
@@ -90,4 +92,5 @@ USER_AGENT = 'potential lyst employee (javissullivan@gmail.com)'
 #HTTPCACHE_IGNORE_HTTP_CODES=[]
 #HTTPCACHE_STORAGE='scrapy.extensions.httpcache.FilesystemCacheStorage'
 
+DOWNLOAD_DELAY = 5
 ROBOTSTXT_OBEY = False
