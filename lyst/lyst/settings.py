@@ -44,7 +44,7 @@ COOKIES_ENABLED=False
 DEFAULT_REQUEST_HEADERS = {
    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
    'Accept-Language': 'en',
-   'Referer': 'http://careers.stackoverflow.com/jobs/94455/web-scraping-engineer-remote-8-week-contract-lyst'
+   'Referer': 'www.google.com'
 }
 
 # Enable or disable spider middlewares
